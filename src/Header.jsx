@@ -6,7 +6,8 @@ function Header(props) {
     <div className="bg-white border-b border-white shadow-sm">
       {/* <div className="mt-10"></div> */}
 
-      <div className="container mx-auto flex items-center justify-between p-3">
+      <div className="mx-auto max-w-7xl p-2">
+        <div className=" flex items-center justify-between p-3">
         <div>
           <NavLink to="/" end>
             <h1 className="text-xl sm:text-2xl text-green-600 font-medium">
@@ -46,6 +47,7 @@ function Header(props) {
           </NavLink>
         </div>
         {/* </div> */}
+      </div>
       </div>
     </div>
   );
