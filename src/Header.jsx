@@ -32,7 +32,7 @@ function Header(props) {
             {/* <p className="text-xl">Home</p> */}
           </NavLink>
           <NavLink
-            to="/about"
+            to="/product"
             className={({ isActive }) =>
               `rounded px-3 py-2 transition font-semibold text-lg ${
                 isActive

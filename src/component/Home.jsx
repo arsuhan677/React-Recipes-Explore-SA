@@ -16,7 +16,7 @@ function Home(props) {
         </p>
       </div>
       <div className="">
-        <NavLink to={"/about"} >
+        <NavLink to={"/product"} >
         <button className="bg-green-600 hover:bg-green-500 shadow-lg shadow-green-500 py-3.5 px-6 rounded-full cursor-pointer text-white text-lg">Explore Recipes</button>
         </NavLink>
       </div>

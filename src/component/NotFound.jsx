@@ -1,13 +1,13 @@
-import React from 'react';
+// import React from 'react';
 
-function NotFound(props) {
-    return (
-        <div>
+// function NotFound(props) {
+//     return (
+//         <div>
 
-            <h1>server error</h1>
+//             <h1>server error</h1>
             
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
-export default NotFound;
+// export default NotFound;
