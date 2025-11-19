@@ -11,41 +11,55 @@ function ProductDetails(props) {
   // console.log(steps.state);
   return (
     <div>
-      <div className="card card-side bg-white rounded-2xl overflow-hidden my-12 shadow-sm container mx-auto flex space-x-10">
-        <div className="w-1/2">
-          <img className="w-full" src={product.img} alt={product.title} />
-          {/* <img
-            className="w-full object-cover"
-            src={product.img}
-            alt={product.title}
-          /> */}
-        </div>
+      <div className="card bg-white rounded-2xl overflow-hidden my-12 shadow-sm container mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 p-5">
 
-        <div className="card-body w-1/2 py-10">
-          <h4 className="text-lg uppercase text-green-500 mb-4">
-            recipes{" "}
-            <span className="text-lg uppercase text-green-500">
-              # [{product.id}]
-            </span>
-          </h4>
-          <h2 className="card-title text-3xl font-semibold mb-4">
-            {product.title}
-          </h2>
-          <p className="mb-6 text-lg text-gray-600">{product.description}</p>
+  {/* Image Section */}
+  <div className="w-full lg:w-1/2">
+    <img
+      className="w-full h-64 sm:h-80 lg:h-full object-cover rounded-xl"
+      src={product.img}
+      alt={product.title}
+    />
+  </div>
 
-          <div className="card-actions justify-end space-x-4">
-            <button onClick={() => setToggleOption("ing")} className="btn btn-sm text-gray-800 hover:text-cyan-500 rounded-full border py-2 px-5 hover:border-cyan-500 font-semibold cursor-pointer">
-              View ingredients
-            </button>
-            <button onClick={() => setToggleOption("step")} className="btn btn-sm text-gray-800 hover:text-cyan-500 rounded-full border py-2 px-5 hover:border-cyan-500 font-semibold cursor-pointer">
-              View steps
-            </button>
-            <button className="bg-cyan-500 hover:bg-cyan-400 py-3 px-6 rounded-full text-black cursor-pointer font-semibold">
-              Quick view
-            </button>
-          </div>
-        </div>
-      </div>
+  {/* Text Section */}
+  <div className="card-body w-full lg:w-1/2 py-5">
+    <h4 className="text-base sm:text-lg uppercase text-green-500 mb-2">
+      recipes{" "}
+      <span className="uppercase text-green-500"># [{product.id}]</span>
+    </h4>
+
+    <h2 className="card-title text-2xl sm:text-3xl font-semibold mb-4">
+      {product.title}
+    </h2>
+
+    <p className="mb-6 text-gray-600 text-base sm:text-lg">
+      {product.description}
+    </p>
+
+    {/* Buttons */}
+    <div className="card-actions flex flex-wrap gap-3 justify-start">
+      <button
+        onClick={() => setToggleOption("ing")}
+        className="text-gray-800 hover:text-cyan-500 rounded-full border py-2 px-5 hover:border-cyan-500 font-semibold cursor-pointer"
+      >
+        View ingredients
+      </button>
+
+      <button
+        onClick={() => setToggleOption("step")}
+        className="text-gray-800 hover:text-cyan-500 rounded-full border py-2 px-5 hover:border-cyan-500 font-semibold cursor-pointer"
+      >
+        View steps
+      </button>
+
+      <button className="bg-cyan-500 hover:bg-cyan-400 py-3 px-6 rounded-full text-black cursor-pointer font-semibold">
+        Quick view
+      </button>
+    </div>
+  </div>
+</div>
+
       <div className="container mx-auto">
         <div className="bg-white rounded-2xl p-10 shadow-lg border border-white">
           <div className="space-x-12 text-lg">
