@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-import { useLocation, useParams } from "react-router";
+import { useLocation, useNavigate, useParams } from "react-router";
 
 function ProductDetails(props) {
   const { state } = useLocation();
   const [toggleOption, setToggleOption] = useState("");
   const product = state;
-  console.log(product.img)
+  console.log(product.img);
+
+  const navigate = useNavigate();
 
   const ingredients = state.ingredients;
   const steps = state.steps;
   return (
-    <div className="px-3">
-      <div className="card bg-white rounded-2xl overflow-hidden my-12 shadow-sm container mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 p-5">
+    <div className="px-3 container mx-auto">
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className="text-sm font-medium text-emerald-600 hover:text-emerald-500 mt-8 cursor-pointer"
+      >
+        ← Back
+      </button>
+      <div className="card bg-white rounded-2xl overflow-hidden my-12 shadow-sm flex flex-col lg:flex-row gap-6 lg:gap-10 p-3">
         {/* Img Section */}
         <div className="w-full lg:w-1/2">
           <img
