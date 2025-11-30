@@ -20,14 +20,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/productDetails/:producId", Component: ProductDetails
-      }
+      },
     ],
   },
-  // {
-  //   path: "/products", ele
-  // }
-
-  // { path: "*", Component: NotFound },
 ]);
 
 createRoot(document.getElementById("root")).render(

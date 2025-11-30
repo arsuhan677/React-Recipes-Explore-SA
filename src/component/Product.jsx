@@ -10,7 +10,7 @@ function Product(props) {
       id: 1,
       title: "Burgger",
       description: "This is the first product description.",
-      img: "images (2).jpeg",
+      img: "/images/images (2).jpeg",
       ingredients: [
         "0Salt & pepper",
         "Fresh basil leaves",
@@ -31,8 +31,8 @@ function Product(props) {
     {
       id: 2,
       title: "Product Two",
-      description: "This is the second product description.",
-      img: "images (3).jpeg",
+      description: "This is the 2nd product description.",
+      img: "/images/images (3).jpeg",
       ingredients: [
         "1Salt & pepper",
         "Fresh basil leaves",
@@ -54,7 +54,7 @@ function Product(props) {
       id: 3,
       title: "Product Three",
       description: "This is the third product description.",
-      img: "images (3).jpeg",
+      img: "/images/images (3).jpeg",
       ingredients: [
         "2Salt & pepper",
         "Fresh basil leaves",
@@ -76,7 +76,7 @@ function Product(props) {
       id: 4,
       title: "Product Three",
       description: "This is the third product description.",
-      img: "images (3).jpeg",
+      img: "/images/images (3).jpeg",
       ingredients: [
         "3Salt & pepper",
         "Fresh basil leaves",
@@ -98,7 +98,7 @@ function Product(props) {
       id: 5,
       title: "Product Three",
       description: "This is the third product description.",
-      img: "images (2).jpeg",
+      img: "/images/images (2).jpeg",
       ingredients: [
         "4Salt & pepper",
         "Fresh basil leaves",
@@ -120,7 +120,51 @@ function Product(props) {
       id: 6,
       title: "Product Three",
       description: "This is the third product description.",
-      img: "images (3).jpeg",
+      img: "/images/images (3).jpeg",
+      ingredients: [
+        "5Salt & pepper",
+        "Fresh basil leaves",
+        "1/4 cup olive oil",
+        "2 cups cherry tomatoes",
+        "1/4 cup olive oil",
+        "2 cups cherry tomatoes",
+      ],
+      steps: [
+        "5Toss pasta with sauce and basil, season to taste.",
+        "Add tomatoes and simmer until softened.",
+        "Sauté garlic in olive oil until fragrant.",
+        "Cook pasta according to package instructions.",
+        "Sauté garlic in olive oil until fragrant.",
+        "Cook pasta according to package instructions.",
+      ],
+    },
+    {
+      id: 7,
+      title: "Product Three",
+      description: "This is the 7th product description.",
+      img: "/images/images (3).jpeg",
+      ingredients: [
+        "5Salt & pepper",
+        "Fresh basil leaves",
+        "1/4 cup olive oil",
+        "2 cups cherry tomatoes",
+        "1/4 cup olive oil",
+        "2 cups cherry tomatoes",
+      ],
+      steps: [
+        "5Toss pasta with sauce and basil, season to taste.",
+        "Add tomatoes and simmer until softened.",
+        "Sauté garlic in olive oil until fragrant.",
+        "Cook pasta according to package instructions.",
+        "Sauté garlic in olive oil until fragrant.",
+        "Cook pasta according to package instructions.",
+      ],
+    },
+    {
+      id: 8,
+      title: "Product Three",
+      description: "This is the 8th product description.",
+      img: "/images/images (3).jpeg",
       ingredients: [
         "5Salt & pepper",
         "Fresh basil leaves",
@@ -140,7 +184,7 @@ function Product(props) {
     },
   ];
 
-  // Filter products by ID if query is a number, otherwise by title
+  // Filter
   const filteredProducts = searchQuery
     ? products.filter((p) => {
         const isNumber = !isNaN(searchQuery);
@@ -188,14 +232,14 @@ function Product(props) {
   </div>
 
   {/* Product Cards */}
-  <div className="container mx-5 sm:mx-auto grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 py-6 sm:py-10">
+  <div className="container mx-5 sm:mx-auto grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 py-6 sm:py-10">
     {filteredProducts.map((product) => (
       <NavLink
         key={product.id}
         state={product}
         to={`/productDetails/${product.id}`}
       >
-        <div className="rounded-xl card bg-base-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="rounded-xl card bg-white shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <img
             className="w-full h-36 sm:h-56 md:h-60 object-cover"
             src={product.img}
