@@ -4,7 +4,6 @@ import { NavLink } from "react-router";
 function Home(props) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
-    {/* <div className="bg-white border border-white shadow-sm container mx-5 sm:mx-auto py-8 px-5 sm:px-10 my-12 rounded-2xl"> */}
     <div className="bg-white border border-white shadow-sm rounded-2xl p-10">
   <div className="mb-8 sm:mb-10">
     <p className="text-[18px] sm:text-[20px] uppercase text-green-400 mb-2 sm:mb-4">Welcome</p>

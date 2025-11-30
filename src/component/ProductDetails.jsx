@@ -10,7 +10,7 @@ function ProductDetails(props) {
   const ingredients = state.ingredients;
   const steps = state.steps;
   return (
-    <div>
+    <div className="px-3">
       <div className="card bg-white rounded-2xl overflow-hidden my-12 shadow-sm container mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 p-5">
         {/* Img Section */}
         <div className="w-full lg:w-1/2">
